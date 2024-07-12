@@ -2223,6 +2223,9 @@ form {
   .social-hero {
     display: none
   }
+  .callback__container::before {
+    display: none
+  }
   .reviews .reviews__wrapper-section::before {
     display: none
   }
