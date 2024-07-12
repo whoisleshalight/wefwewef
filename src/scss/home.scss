@@ -790,3 +790,20 @@ opacity: 0;
 		}
 	}
 }
+
+.reviews{
+	@media (max-width:$mobile){
+		  position: relative;
+		  &::before{
+			content:'';
+			position: absolute;top: 0%;
+			left: 50%;
+			transform: translateX(-50%);
+			background: url('@img/mob/blue.png');
+			background-size: contain !important;
+			background-repeat: no-repeat;
+			width: toRem(700);
+			height: toRem(700);
+		  }
+	}
+}
