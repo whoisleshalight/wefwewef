@@ -2284,6 +2284,14 @@ form {
   .portfolio::after {
     display: none
   }
+  .reviews .reviews__container {
+    max-width: 100%!important;
+    width: 100%;
+    padding: 0
+  }
+  .reviews .reviews__container .slide-reviews__wrapper {
+    margin: 0 .9375rem
+  }
 }
 @media (max-width:24.375em) {
   .checkbox__text {

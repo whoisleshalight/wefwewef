@@ -779,3 +779,14 @@ opacity: 0;
 
 	}
 }
+
+.reviews{
+	.reviews__container{
+		@media (max-width:$mobileSmall){
+			 max-width: 100% !important;width: 100%;padding: 0;
+			 .slide-reviews__wrapper{
+				margin: 0 toRem(15);
+			 }
+		}
+	}
+}
