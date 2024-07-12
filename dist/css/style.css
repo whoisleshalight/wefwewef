@@ -2261,6 +2261,22 @@ form {
   .reviews__slide {
     min-height: 18.75rem
   }
+  .reviews {
+    position: relative
+  }
+  .reviews::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background: url(../img/mob/blue.webp);
+    background-size: contain!important;
+    background-repeat: no-repeat;
+    width: 43.75rem;
+    height: 43.75rem
+  }
   .info-section__title {
     max-width: 100%
   }
