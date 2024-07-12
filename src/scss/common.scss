@@ -1,0 +1,300 @@
+// Заголовки, загальні БЕМ блоки та інше...
+._title {
+	text-align: center;
+	font-weight: 800;
+	@include adaptiveValue("font-size", 36,24, 0,1400,390);line-height: 120%;
+	@media (max-width:$mobileSmall){
+		  max-width: toRem(271);margin: 0 auto;
+	}
+	color: $yellowColor;
+	text-transform: uppercase;
+}
+
+body::-webkit-scrollbar-track {
+	background-color: $blueColor;
+	border-radius: 50px;
+}
+body::-webkit-scrollbar-thumb {
+	background-color: $yellowColor;
+	border-radius: 50px;
+}
+body::-webkit-scrollbar {
+	width: 4px;
+}
+
+._swiper-nav {
+	position: relative;
+	z-index: 5;
+	display: flex;
+	align-items: center;
+	gap: toRem(40);
+	justify-content: flex-end;
+	margin-bottom: toRem(40);
+	@media (max-width:$mobile){
+		 display: none; 
+	}
+	button {
+		&::before {
+			font-size: toRem(46);
+			transition: all 0.4s;
+			color: $yellowColor;
+			transition: all 0.4s;
+		}
+		&:last-child {
+			transform: rotate(180deg);
+		}
+		transition: all 0.4s;
+		@media (any-hover: hover) {
+			&:hover {
+				&::before {
+					color: $lightPinkColor;
+				}
+			}
+		}
+	}
+}
+
+._slider-pagination {
+	margin-top: toRem(40);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	._swiper-pagination-item {
+		display: flex;
+		align-items: center;
+		gap: toRem(6);
+	}
+	.swiper-pagination-bullet {
+		width: toRem(8);
+		height: toRem(8);
+		flex: 0 0 toRem(8);
+		background-color: transparent;
+		border-radius: 50%;
+		border: 1px solid $yellowColor;
+		cursor: pointer;
+		transition: all 0.4s;
+		transition: all 0.4s;
+		@media (any-hover: hover) {
+			&:hover {
+				border: 1px solid $lightPinkColor;
+			}
+		}
+	}
+	.swiper-pagination-bullet.swiper-pagination-bullet-active {
+		background-color: $yellowColor;
+		cursor: default;
+		pointer-events: none;
+	}
+}
+//========================================================================================================================================================
+
+
+.policy__container,
+.policy__section{
+	opacity: 0;
+	transform: translateY(toRem(60));
+	transition: all 0.8s ease 0.2s;visibility: hidden;
+	.loaded &{
+		opacity: 1;visibility: visible;
+		transform: translateY(0);
+	}
+}
+
+
+.hero__bg{
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.8s ease .4s;
+	.loaded &{
+		opacity: 0.2;
+		visibility: visible;
+	}
+}
+
+
+
+
+.callback-modal__info{
+	color: $blueColor;
+	margin-top: toRem(10);font-weight: 500;
+	text-align: center;line-height: 130%;
+	@media (max-width:$mobile){
+		 margin-top: toRem(40); 
+	}
+}
+
+
+.header__logo{
+	opacity: 0;visibility: hidden;transition: all 0.4s ease .1s;
+	.loaded &{
+		opacity: 1;
+		visibility: visible;pointer-events: all;
+	}
+}
+
+.menu__list li{
+	opacity: 0;visibility: hidden;
+}
+.menu__list li:nth-child(1){
+	transition: all 0.4s ease .2s;
+}
+.menu__list li:nth-child(2){
+		transition: all 0.4s ease .3s;
+}
+.menu__list li:nth-child(3){
+	transition: all 0.4s ease .4s;
+
+}
+.menu__list li:nth-child(4){
+	transition: all 0.4s ease .5s;
+}
+.menu__list li:nth-child(5){
+	transition: all 0.4s ease .6s;
+}
+
+.menu__list li{
+	transform: translateY(toRem(-40));
+	opacity: 0;visibility: hidden;
+	.loaded &{
+		opacity: 1;
+		transform: translateY(0);
+		visibility: visible;
+	}
+}
+.menu__actions{
+	opacity: 0;transition: all 0.6s ease .6s;
+	visibility: hidden;
+	.loaded &{
+		opacity: 1;
+		visibility: visible;
+	}
+}
+.hero__title{
+	transform: translateY(toRem(40));
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.8s ease .2s;
+	.loaded &{	
+		transform: translateY(toRem(0));
+
+		opacity: 1;
+		visibility: visible;
+	}
+}
+.hero__actions{
+	transform: translateY(toRem(40));
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.8s ease .4s;
+	.loaded &{	
+		transform: translateY(toRem(0));
+
+		opacity: 1;
+		visibility: visible;
+	}
+}
+//========================================================================================================================================================
+
+
+._sending{
+	pointer-events: none;
+	opacity: .6;
+	.loader{
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+
+
+form{
+	transition: all 0.6s;
+	position: relative;
+	
+}
+
+.loader {
+	
+	opacity: 0;
+	pointer-events: none;
+	visibility: hidden;
+	position: absolute;
+	top: 50%;left: 50%;transform: translate(-50%,-50%);
+	transition: all 0.4s;
+	margin: auto;
+	width: toRem(40);
+	border-radius: 100vmin;
+	overflow: hidden;
+	padding: 1.25rem;
+  
+  &::before {
+    content: "";
+	  display: block;
+	  padding-top: 100%;
+  }
+}
+
+.circular {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	inset: 0;
+	margin: auto;
+	transform-origin: center center;
+	animation: 2s linear 0s infinite rotate;
+}
+
+.path {
+  stroke: $yellowColor;
+	stroke-dasharray: 1,200;
+	stroke-dashoffset: 0;
+	stroke-linecap: round; 
+	animation: 1.5s ease-in-out 0s infinite dash;
+	._blue &{
+		animation: 1.5s ease-in-out 0s infinite dashblue !important;
+
+	}
+}
+
+@keyframes dash {
+	0%{
+		stroke-dasharray: 1,200;
+		stroke-dashoffset: 0;
+		
+	}
+	50% {
+		stroke-dasharray: 89,200;
+		stroke-dashoffset: -35px;
+		stroke: yellow;
+	}
+	100% {
+		stroke-dasharray: 89,200;
+		stroke-dashoffset: -124px;
+	}
+}
+@keyframes dashblue {
+	0%{
+		stroke-dasharray: 1,200;
+		stroke-dashoffset: 0;
+		
+	}
+	50% {
+		stroke-dasharray: 89,200;
+		stroke-dashoffset: -35px;
+		stroke: $blueColor;
+	}
+	100% {
+		stroke-dasharray: 89,200;
+		stroke-dashoffset: -124px;
+	}
+}
+
+@keyframes rotate {
+	to {
+		transform:rotate(1turn);
+	}
+}
+._blue svg circle{
+	stroke: $blueColor;
+	
+}

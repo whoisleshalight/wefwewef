@@ -1,0 +1,97 @@
+
+.preloader {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+	transition: background-color 0s ease 0s, opacity 0.6s ease 0s;
+	position: fixed;top: 0;left: 0;z-index: 999;
+	background-color: $blueColor;
+	transition: all 0.6s;
+	&__box {
+		width: 60px;
+		height: 60px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+
+		span {
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			position: absolute;
+			border: 2px solid #fff;
+			pointer-events: none;
+			animation: preloader 1.5s linear infinite;
+
+			&:nth-of-type(1) {
+				border-radius: 48% 52% 68% 32% / 46% 40% 60% 54%;
+				box-shadow: 0px 0px 10px 0px rgb(226 202 255 / 50%), inset 0px 0px 10px 0px rgb(226 202 255 / 50%);
+			}
+
+			&:nth-of-type(2) {
+				animation-direction: reverse;
+				border-radius: 27% 73% 64% 36% / 69% 39% 61% 31%;
+				box-shadow: 0px 0px 10px 0px rgb(226 202 255 / 50%), inset 0px 0px 10px 0px rgb(226 202 255 / 50%);
+
+			}
+
+			&:nth-of-type(3) {
+				animation-duration: 3s;
+				border-radius: 58% 42% 30% 70% / 38% 59% 41% 62%;
+				box-shadow: 0px 0px 10px 0px rgb(226 202 255 / 70%), inset 0px 0px 10px 0px rgb(226 202 255 / 70%);
+			}
+		}
+	}
+}
+
+@keyframes preloader {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.wavy{
+	position: relative;
+ 
+}
+.wavy span{
+	position: relative;
+	display: inline-block;
+	font-size: toRem(18);
+	// text-transform: uppercase;
+
+	animation: animate 1s ease-in-out infinite;
+	animation-delay: calc(0.1s * var(--i));
+}
+@keyframes animate {
+	0% {
+		 transform: translateY(0px);
+		 color: #e2caff;
+		 opacity: 0.2;
+	}
+	20% {
+		 transform: translateY(-20px);
+		 color: #e2caff;
+		 opacity: 0.3;
+	}
+	40%, 100% {
+		 transform: translateY(0px);
+		 color: inherit; /* добавлено для возврата к первоначальному цвету */
+		 opacity: inherit; /* добавлено для возврата к первоначальной непрозрачности */
+	}
+}
+
+.loaded{
+	.preloader{
+		opacity: 0;
+		visibility: hidden;pointer-events: none;
+	}
+}

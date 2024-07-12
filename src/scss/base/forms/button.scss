@@ -1,0 +1,132 @@
+//<BUTTONS (a.btn+tab)>
+// Сніппет (HTML): btn
+
+.button {
+	display: inline-flex;
+	padding: 0px 0px;
+	@media (any-hover: hover) {
+		&:hover {
+		}
+	}
+	&--fw {
+		width: 100%;
+	}
+}
+
+ 
+._social{
+	&::before{
+		font-size: toRem(28);
+		color: $lightPinkColor;
+		transition: all 0.4s;
+	}
+	@media (any-hover: hover){
+		&:hover{
+			&::before{
+				color: $yellowColor;
+				
+			}
+		}
+	}
+}
+
+
+
+.button-light{color: $darkPurpleColor;font-weight: 600;border-radius: toRem(40);
+	 display: flex;justify-content: center;align-items: center;
+	 padding: toRem(14) toRem(40);font-size: toRem(16);
+	 min-height: toRem(46);background-color: $yellowColor;
+	 transition: all 0.4s;
+	 border: 1px solid transparent;
+	 @media (any-hover: hover){
+		&:hover{
+			border: 1px solid $yellowColor;
+			background-color:transparent;color: $yellowColor;
+		}
+	 }
+}
+
+._action-link{
+	background-color: $purpleColor;
+	border: 1px solid transparent;
+	transition: all 0.6s;
+	min-height: toRem(50);
+	display: flex;align-items: center;gap: toRem(40);
+	padding-left: toRem(16);
+	padding-right: toRem(4);
+	border-radius: toRem(35);
+	font-family: 'Inter';
+	font-weight: 400;
+	text-transform: uppercase;
+	color: $yellowColor;
+	span.icon{
+		flex: 0 0 toRem(40);
+		width: toRem(40);
+		height: toRem(40);transition: all 0.6s;
+		border-radius: 50%;
+		border: 1px solid transparent;position: relative;
+		background-color:$blueDarkColor;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		overflow: hidden;
+		&::before{
+			transform: rotate(180deg);
+			font-size: toRem(26);transition: all 0.6s;
+		}
+		position: relative;
+		span.subicon{
+			position: absolute;
+			top: 50%;
+			left: 50%;transition: all 0.6s;
+			transform: translate(-180%, -50%);
+			&::before{
+				transform: rotate(180deg);
+				font-size: toRem(26);
+			}
+		}
+	}
+	@media (any-hover: hover){
+		&:hover{
+			background-color: transparent;
+			border: 1px solid $yellowColor;
+			span.icon{
+				border: 1px solid $yellowColor;
+				&::before{
+					transform: rotate(180deg) translateX(-150%);
+				}
+				span.subicon{
+					transform: translate(-50%, -50%);
+				}
+			}
+		}
+	}
+}
+
+._link-light{
+	display: flex;align-items: center;gap: toRem(5);text-transform: uppercase;font-size: toRem(14);
+	font-weight: 700;
+	font-family: 'Inter';
+	padding-top: toRem(8);
+	padding-bottom: toRem(8);
+	padding-left: toRem(14);
+	padding-right: toRem(16);
+	background-color: $blueDarkTwoColor;
+	border-radius: toRem(30);
+	border: 1px solid transparent;
+	&::before{transition: all 0.4s;
+		font-size: toRem(24);transition: all 0.4s;
+	}
+	transition: all 0.4s;
+	@media (any-hover: hover){
+		&:hover{
+			&::before{
+				color: #3A3849;
+				
+			}
+			background-color: #97919B;
+			color:#3A3849 ;
+			border: 1px solid #3A3849;
+		}
+	}
+}

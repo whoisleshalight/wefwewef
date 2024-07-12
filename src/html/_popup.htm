@@ -1,0 +1,95 @@
+<div id="popup" aria-hidden="true" class="popup talk">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<div class="popup__actions">
+				<button data-close type="button" class="popup__close _icon-close"></button>
+			</div>
+			
+			<div class="popup__text">
+				<div class="talk__body">
+					<div class="talk__title">I’m interested in..</div>
+					<form class="talk__form form-talk" action="files/sendmail/sendmail.php" data-dev data-popup-message=".callback-modal" method="POST">
+						<div class="form-talk__item form-talk__item-checkbox checkbox-item-form-talk">
+							<div class="checkbox-item-form-talk__body service-chk">
+								<div class="checkbox">
+									<input id="service_01" data-error="Помилка" class="checkbox__input service-checkbox-item" type="checkbox" value="1" name="form[]">
+									<label for="service_01" class="checkbox__label"><span class="checkbox__text">Web Development</span></label>
+								</div>
+								<div class="checkbox">
+									<input id="service_02" data-error="Помилка" class="checkbox__input service-checkbox-item" type="checkbox" value="1" name="form[]">
+									<label for="service_02" class="checkbox__label"><span class="checkbox__text">UX / UI Design and Branding</span></label>
+								</div>
+								<div class="checkbox">
+									<input id="service_03" data-error="Помилка" class="checkbox__input service-checkbox-item" type="checkbox" value="1" name="form[]">
+									<label for="service_03" class="checkbox__label"><span class="checkbox__text">Shopify Development</span></label>
+								</div>
+								<div class="checkbox">
+									<input id="service_04" data-error="Помилка" class="checkbox__input service-checkbox-item" type="checkbox" value="1" name="form[]">
+									<label for="service_04" class="checkbox__label"><span class="checkbox__text">WordPress Development</span></label>
+								</div>
+							</div>
+							<button type="button" id="resetServiceButton" class="button checkbox-item-form-talk__reset _icon-close"></button>
+						</div>
+						<div class="form-talk__item form-talk__item-checkbox ">
+							<div class="checkbox-item-form-talk__title-light">Project Budget (USD)</div>
+							<div class="checkbox-item-form-talk__wrapper checkbox-item-form-talk">
+								<div class="checkbox-item-form-talk__body">
+									<div class="checkbox">
+										<input id="budget_01" data-error="Помилка" class="checkbox__input price-checkbox-item" type="checkbox" value="1" name="form[]">
+										<label for="budget_01" class="checkbox__label"><span class="checkbox__text">5k - 24k</span></label>
+									</div>
+									<div class="checkbox">
+										<input id="budget_02" data-error="Помилка" class="checkbox__input price-checkbox-item" type="checkbox" value="1" name="form[]">
+										<label for="budget_02" class="checkbox__label"><span class="checkbox__text">25k - 49k</span></label>
+									</div>
+									<div class="checkbox">
+										<input id="budget_03" data-error="Помилка" class="checkbox__input price-checkbox-item" type="checkbox" value="1" name="form[]">
+										<label for="budget_03" class="checkbox__label"><span class="checkbox__text">50k - 99k</span></label>
+									</div>
+									<div class="checkbox">
+										<input id="budget_04" data-error="Помилка" class="checkbox__input price-checkbox-item" type="checkbox" value="1" name="form[]">
+										<label for="budget_04" class="checkbox__label"><span class="checkbox__text">100k +</span></label>
+									</div>
+								</div>
+								<button type="button" id="resetPriceButton" class="button checkbox-item-form-talk__reset _icon-close"></button>
+							</div>
+						</div>
+						<div class="form-talk__item item-form-talk">
+							<input data-required autocomplete="off" type="text" name="form[]"  placeholder="Your Name" class="input">
+							<input data-required="email" autocomplete="off" type="email" name="form[]"  placeholder="E - mail" class="input">
+							<input data-required autocomplete="off" type="text" name="form[]"  placeholder="Your Message" class="input">
+						</div>
+						<div class="form-talk__item item-form-talk-file">
+							<div class="input-file-container">  
+								<input class="input-file" id="my-file" type="file">
+								<label tabindex="0" for="my-file" class="input-file-trigger _icon-link">Add attachment</label>
+							 </div>
+							 <p class="file-return"></p>
+						</div>
+						<button type="submit" class="button _action-btn-light">Send</button>
+						<div class="loader _blue">
+							<svg class='circular' viewbox='25 25 50 50'>
+								<circle class='path' cx='50' cy='50' r='20' fill='none' stroke-width='2' stroke-miterlimit='10' ></circle>
+							</svg>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="popup" aria-hidden="true" class="popup callback-modal">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<div class="popup__actions">
+				<button data-close type="button" class="popup__close _icon-close"></button>
+			</div>
+			
+			<div class="popup__text">
+				<div class="callback-modal__info">
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore saepe corporis quasi suscipit asperiores illum deserunt veniam totam molestiae cumque.
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,74 @@
+.page {
+}
+.policy {
+	@include adaptiveValue("margin-top", 90,70, 0,1400,390);
+	._title{
+		margin-left: 0 !important;
+		margin-right: toRem(0) !important;
+	}
+	&__cnt {
+	}
+
+	&__body {
+	}
+}
+.info-section {
+
+
+
+	display: flex;
+	flex-direction: column;
+	@include adaptiveValue("gap", 50,30, 0,1400,390);
+	padding-top: toRem(80);
+	@include adaptiveValue("padding-bottom", 180,80, 0,1400,390);
+	&__item {
+	}
+
+	&__title {
+		text-align: left;
+		@include adaptiveValue("margin-bottom", 34,20, 0,1400,390);
+		@media (max-width:$mobile){
+			 max-width: 100%; 
+		}
+
+	}
+
+	&__body {
+		line-height: 130%;
+		display: flex;
+		flex-direction: column;
+		@include adaptiveValue("gap", 20,10, 0,1400,390);
+		&._gap-big {
+			@include adaptiveValue("gap", 40,20, 0,1400,390);
+
+		}
+		ul {
+			display: flex;
+			flex-direction: column;
+			gap: toRem(10);
+			li {
+				display: flex;
+				gap: toRem(12);
+				&::before {
+					content: "";
+					position: relative;
+					top: 8px;
+					width: toRem(3);
+					height: toRem(3);
+					flex: 0 0 toRem(3);
+					border-radius: 50%;
+					background-color: $lightColor;
+				}
+			}
+		}
+	}
+}
+.info-section {
+	max-width: toRem(1064);
+	margin: 0 auto;
+}
+.info-section__title._title{
+	@media (max-width:$mobile){
+		 max-width: 100% !important; 
+	}
+}

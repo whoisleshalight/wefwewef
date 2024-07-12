@@ -1,0 +1,142 @@
+//====================================================================================================
+
+//====================================================================================================
+.footer {
+	&__container {
+	}
+	&__wraper {
+		border-top: 1px solid $darkPurpleColor;
+		padding-top: toRem(100);
+		@include adaptiveValue("padding-top", 100,70, 0,1400,390);
+	}
+	&__top {
+		display: flex;flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		gap: toRem(40);
+		@include adaptiveValue("gap", 40,70, 0,1400,390);
+		@media (max-width:$mobile){
+			 flex-direction: column;text-align: center; 
+		}
+	}
+
+	&__logo {
+		@media (max-width: toEm(1100)){
+			  flex: 1 1 auto;width: 100%;
+		}
+		img {
+			@include adaptiveValue("width", 200,160, 0,1400,390);
+
+			object-fit: contain;
+		}
+	}
+
+	&__contacts {
+	}
+
+	&__nav {
+	}
+
+	&__links {
+	}
+
+	&__social {
+	}
+
+	&__copyright {
+		@include adaptiveValue("padding-top", 100,80, 0,1400,390);
+	@media (max-width:$mobile){
+		 align-items: center; text-align: center;line-height: 130%;
+	}
+		padding-bottom: toRem(40);
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		align-items: flex-end;
+		font-weight: 400;
+	}
+}
+.contacts-footer {
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: toRem(22);
+		@media (max-width:$mobile){
+			 justify-content: center;text-align: center; align-items: center;
+		}
+	}
+
+	&__item {
+	}
+
+	&__link {
+		font-weight: 400;
+		display: flex;
+		align-items: center;
+		gap: toRem(10);
+		transition: all 0.4s;
+		&::before {
+			font-size: toRem(24);
+			transition: all 0.2s;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: $yellowColor;
+			}
+		}
+	}
+}
+
+.nav-footer {
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: toRem(20);
+	}
+
+	&__item {
+	}
+
+	&__link {
+		font-weight: 400;
+		transition: all 0.4s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $yellowColor;
+			}
+		}
+	}
+}
+.links-footer {
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: toRem(20);
+	}
+
+	&__item {
+	}
+
+	&__link {
+		font-weight: 400;
+		transition: all 0.4s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $yellowColor;
+			}
+		}
+	}
+}
+.social-footer {
+	&__list {
+		display: flex;
+		align-items: center;
+		gap: toRem(20);
+	}
+
+	&__item {
+	}
+
+	&__link {
+	}
+}
