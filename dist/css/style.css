@@ -2338,12 +2338,6 @@ form {
   .swiper-expertise__nav._swiper-nav {
     margin-bottom: 0
   }
-  .expertise__slide {
-    min-height: 15.625rem
-  }
-  .reviews__slide {
-    min-height: 18.75rem
-  }
   .reviews {
     position: relative
   }
@@ -2376,9 +2370,6 @@ form {
   ._title {
     max-width: 16.9375rem;
     margin: 0 auto
-  }
-  .slide-reviews__wrapper {
-    min-height: 21.25rem
   }
   .portfolio::before {
     display: none
