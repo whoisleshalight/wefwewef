@@ -16,9 +16,9 @@ display: flex;flex-direction: column;
 
 	&__body {flex: 1 1 auto;display: flex;flex-direction: column;justify-content: center;align-items: center;text-align: center;
 		@include adaptiveValue("gap", 30,50, 0,1400,390);
-		@media (max-width:$mobile){
-			  
-		}
+	@media (min-width:$mobile){
+		 padding-top: toRem(90); 
+	}
 	}
 
 	&__title {font-weight: 700;max-width: toRem(1080);margin: 0 auto;color: $lightPinkColor;line-height: 120%;text-transform: capitalize;
@@ -636,8 +636,8 @@ z-index: -1;			opacity: 1	;background-color:$blueLightColor;
 .item-expertise {
 
 	&__info {
-		flex: 0 0 toRem(370);
-		display: flex;flex-direction: column;gap: toRem(30);
+		flex: 0 0 toRem(321);
+		display: flex;flex-direction: column;gap: toRem(28);
 		@media (max-width:$tablet){
 			flex: 0 0 toRem(260);
 		}
@@ -656,10 +656,11 @@ z-index: -1;			opacity: 1	;background-color:$blueLightColor;
 }
 .info-item-expertise {
 
-	&__title {font-weight: 500;font-size: toRem(24);color: $yellowColor	;
+	&__title {font-weight: 500;font-size: toRem(24);color: $yellowColor	;		text-transform: uppercase;font-family: 'Inter';
+
 	}
 
-	&__text {font-size: toRem(16);font-weight: 300;line-height: 130%;
+	&__text {font-size: toRem(18);font-weight: 300;line-height: 130%;
 	}
 }
 
@@ -685,9 +686,11 @@ z-index: -1;			opacity: 1	;background-color:$blueLightColor;
 	&__uptitle {font-size: toRem(20);font-weight: 600;
 		color: $yellowColor;display: block;
 		margin-bottom: toRem(18);
+		text-transform: uppercase;font-family: 'Inter';
 	}
 
-	&__title {font-weight: 500;font-size: toRem(20);margin-bottom: toRem(22);line-height: 120%;
+	&__title {font-weight: 500;font-size: toRem(20);margin-bottom: toRem(22);line-height: 120%;		text-transform: uppercase;font-family: 'Inter';
+
 
 	}
 

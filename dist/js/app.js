@@ -4026,7 +4026,7 @@
                 observer: true,
                 observeParents: true,
                 slidesPerView: 4,
-                spaceBetween: 40,
+                spaceBetween: 30,
                 speed: 800,
                 simulateTouch: false,
                 pagination: {
@@ -4053,7 +4053,7 @@
                     },
                     1268: {
                         slidesPerView: 2.5,
-                        spaceBetween: 40
+                        spaceBetween: 30
                     }
                 },
                 on: {}
@@ -4075,7 +4075,7 @@
                 observer: true,
                 observeParents: true,
                 slidesPerView: 4,
-                spaceBetween: 40,
+                spaceBetween: 30,
                 speed: 800,
                 simulateTouch: false,
                 pagination: {
@@ -4102,7 +4102,7 @@
                     },
                     1268: {
                         slidesPerView: 2.5,
-                        spaceBetween: 40
+                        spaceBetween: 30
                     }
                 },
                 on: {}
@@ -4124,7 +4124,7 @@
                 observer: true,
                 observeParents: true,
                 slidesPerView: 4,
-                spaceBetween: 40,
+                spaceBetween: 30,
                 speed: 800,
                 simulateTouch: false,
                 pagination: {
@@ -4151,7 +4151,7 @@
                     },
                     1268: {
                         slidesPerView: 2.5,
-                        spaceBetween: 40
+                        spaceBetween: 30
                     }
                 },
                 on: {}

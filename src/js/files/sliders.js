@@ -283,7 +283,7 @@ function initSliders() {
 			observer: true,
 			observeParents: true,
 			slidesPerView: 4,
-			spaceBetween: 40,
+			spaceBetween: 30,
 			//autoHeight: true,
 			speed: 800,
 			simulateTouch: false,
@@ -339,7 +339,7 @@ function initSliders() {
 				},
 				1268: {
 					slidesPerView: 2.5,
-					spaceBetween: 40,
+					spaceBetween: 30,
 				},
 			},
 			/*
@@ -397,7 +397,7 @@ function initSliders() {
 			observer: true,
 			observeParents: true,
 			slidesPerView: 4,
-			spaceBetween: 40,
+			spaceBetween: 30,
 			//autoHeight: true,
 			speed: 800,
 			simulateTouch: false,
@@ -454,7 +454,7 @@ function initSliders() {
 				},
 				1268: {
 					slidesPerView: 2.5,
-					spaceBetween: 40,
+					spaceBetween: 30,
 				},
 			},
 			/*
@@ -512,7 +512,7 @@ function initSliders() {
 			observer: true,
 			observeParents: true,
 			slidesPerView: 4,
-			spaceBetween: 40,
+			spaceBetween: 30,
 			//autoHeight: true,
 			speed: 800,
 			simulateTouch: false,
@@ -569,7 +569,7 @@ function initSliders() {
 				},
 				1268: {
 					slidesPerView: 2.5,
-					spaceBetween: 40,
+					spaceBetween: 30,
 				},
 			},
 			/*
