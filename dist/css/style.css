@@ -1066,20 +1066,6 @@ form {
   filter: blur(100px);
   opacity: .7
 }
-.callback__container::after {
-  content: "";
-  width: 31.25rem;
-  height: 20.625rem;
-  position: absolute;
-  background-color: #621f81;
-  -webkit-filter: blur(100px);
-  filter: blur(100px);
-  top: 50%;
-  right: 20%;
-  opacity: .7;
-  -webkit-transform: rotate(45deg) translate(0,-50%);
-  transform: rotate(45deg) translate(0,-50%)
-}
 .callback__wrapper {
   z-index: 2;
   max-width: 74.375rem;
@@ -1432,6 +1418,9 @@ form {
 .expertise__title {
   margin-bottom: 2.875rem!important
 }
+.expertise__wrapper {
+  position: relative
+}
 .expertise__items {
   max-width: 1250px;
   margin: 0 auto;
@@ -1442,35 +1431,11 @@ form {
 }
 .expertise__items::before {
   content: "";
-  position: absolute;
-  top: 20%;
-  left: -10%;
-  width: 50rem;
-  height: 18.75rem;
-  border-radius: 50%;
-  -webkit-filter: blur(100px);
-  filter: blur(100px);
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-  z-index: -1;
-  opacity: 1;
-  background-color: #3a039f
+  position: absolute
 }
 .expertise__items::after {
   content: "";
-  position: absolute;
-  bottom: 20%;
-  right: 10%;
-  z-index: -1;
-  width: 41.25rem;
-  height: 26.875rem;
-  border-radius: 50%;
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-  background-color: #621f81;
-  -webkit-filter: blur(100px);
-  filter: blur(100px);
-  opacity: .6
+  position: absolute
 }
 .expertise__item {
   display: flex;
@@ -1843,9 +1808,51 @@ form {
   .hero__bg {
     height: 90vh
   }
+  .callback__container::after {
+    content: "";
+    width: 31.25rem;
+    height: 20.625rem;
+    position: absolute;
+    background-color: #621f81;
+    -webkit-filter: blur(100px);
+    filter: blur(100px);
+    top: 50%;
+    right: 20%;
+    opacity: .7;
+    -webkit-transform: rotate(45deg) translate(0,-50%);
+    transform: rotate(45deg) translate(0,-50%)
+  }
   .reviews__body {
     padding-left: 2.5rem;
     padding-right: 2.5rem
+  }
+  .expertise__items::before {
+    top: 20%;
+    left: -10%;
+    width: 50rem;
+    height: 18.75rem;
+    border-radius: 50%;
+    -webkit-filter: blur(100px);
+    filter: blur(100px);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    z-index: -1;
+    opacity: 1;
+    background-color: #3a039f
+  }
+  .expertise__items::after {
+    bottom: 20%;
+    right: 10%;
+    z-index: -1;
+    width: 41.25rem;
+    height: 26.875rem;
+    border-radius: 50%;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background-color: #621f81;
+    -webkit-filter: blur(100px);
+    filter: blur(100px);
+    opacity: .6
   }
   .slide-portfolio__mobile-bottom,
   .slide-portfolio__mobile-top {
@@ -1859,6 +1866,10 @@ form {
     display: none
   }
   .expertise__slider__top-info {
+    display: none
+  }
+  .callback__info br,
+  .reviews__title br {
     display: none
   }
 }
@@ -2245,6 +2256,20 @@ form {
   .callback__container::before {
     display: none
   }
+  .callback__container::after {
+    content: "";
+    position: absolute;
+    background: url(../img/mob/purple.webp);
+    width: 50rem;
+    height: 50rem;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%)
+  }
   .reviews .reviews__wrapper-section::before {
     display: none
   }
@@ -2259,6 +2284,42 @@ form {
   }
   .expertise {
     padding-top: 3.125rem
+  }
+  .expertise__wrapper::before {
+    content: "";
+    position: absolute;
+    background: url(../img/mob/purple.webp);
+    width: 37.5rem;
+    height: 37.5rem;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 21.875rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%)
+  }
+  .expertise__items::before {
+    background: url(../img/mob/blue-01.webp);
+    width: 31.25rem;
+    height: 31.25rem;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: -8.75rem;
+    left: -9.375rem
+  }
+  .expertise__items::after {
+    background: url(../img/mob/blue-01.webp);
+    width: 31.25rem;
+    -webkit-transform: rotate(80deg);
+    transform: rotate(80deg);
+    height: 31.25rem;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    bottom: 17.5rem;
+    right: -3.125rem
   }
   .swiper-button-disabled {
     opacity: 0;
@@ -2289,8 +2350,8 @@ form {
   .reviews::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 50%;
+    top: 9%;
+    left: 18%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     background: url(../img/mob/blue.webp);
