@@ -145,19 +145,21 @@ object-fit: cover;object-position: center;
 			}
 		font-size: toRem(34);
 		@include adaptiveValue("font-size", 34,28, 0,1400,390);
-		font-weight: 900;
+		font-weight: 800;
+		font-family: 'Poppins';
 		margin-bottom: toRem(90);
-		color: transparent; 
 		text-transform: uppercase;
 		-webkit-text-fill-color: transparent;
 		-webkit-text-stroke-width: 1px;
 		-webkit-text-stroke-color: $yellowColor;
 		letter-spacing: 3px;
-		text-stroke: 1px $yellowColor; 
-		font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+		color: transparent;
+		// text-stroke: 1px $yellowColor; 
 		letter-spacing: toRem(4);
 		line-height: 120%;
-	}
+		font-size: 75px;
+
+		}
 
 	&__form {flex: 1 1 auto;
 	}
@@ -290,7 +292,7 @@ z-index: -1;			opacity: .7;background-color:$blueLightColor;
 		margin-bottom: toRem(45);
 	}
 
-	&__info {line-height: 140%;font-weight: 300;
+	&__info {line-height: 140%;font-weight: 300;font-size: toRem(18);
 	}
 }
 .top-slide-reviews {
@@ -309,10 +311,10 @@ z-index: -1;			opacity: .7;background-color:$blueLightColor;
 		display: flex;flex-direction: column;gap: toRem(6);
 	}
 
-	&__name {font-weight: 500;
+	&__name {font-weight: 600;text-transform: uppercase;
 	}
 
-	&__company {font-weight: 400;
+	&__company {font-weight: 300;
 	}
 }
 
@@ -444,6 +446,8 @@ position: relative;
 		font-size: toRem(10);
 		text-transform: uppercase;text-align: center;
 		color: $grayLightTwoColor;
+		font-family: 'Inter';
+		font-weight: 700;
 	}
 }
 
@@ -549,13 +553,13 @@ position: relative;
 		content:'';
 		position: absolute;
 		top: 20%;
-		left: -15%;
+		left: -10%;
 		width: toRem(800);
-		height: toRem(200);
+		height: toRem(300);
 		border-radius: 50%;
 		filter: blur(100px);
 		transform: rotate(45deg);
-z-index: -1;			opacity: 1	;background-color:$blueLightColor;
+z-index: -1;			opacity: 1	;background-color:rgba(58, 3, 159, 1);
 
 	}
 	&::after{
@@ -567,7 +571,7 @@ z-index: -1;			opacity: 1	;background-color:$blueLightColor;
 		height: toRem(430);
 		border-radius: 50%;
 		transform: rotate(45deg);
-		background-color: $purpleDarkColor;
+		background-color: rgba(98, 31, 129, 1);
 		filter: blur(100px);
 		opacity: .6;
 	}
@@ -581,9 +585,9 @@ z-index: -1;			opacity: 1	;background-color:$blueLightColor;
 		overflow: hidden;
 		position: relative;
 
-		@include adaptiveValue("padding-top", 60,30, 0,1400,1200);
+		@include adaptiveValue("padding-top", 60,47, 0,1400,1200);
 		@include adaptiveValue("padding-bottom", 60,30, 0,1400,1200);
-		@include adaptiveValue("padding-left", 75,30, 0,1400,1200);
+		@include adaptiveValue("padding-left", 75,44, 0,1400,1200);
 		@include adaptiveValue("padding-right", 40,30, 0,1400,1200);
 	
 		&::before{
@@ -609,6 +613,11 @@ z-index: -1;			opacity: 1	;background-color:$blueLightColor;
 	&__slide {
 	}
 }
+.expertise-swiper-one__pagination{
+	@media (max-width:$mobileSmall){
+		 margin-top: toRem(61); 
+	}
+}
 
 .swiper-expertise__nav._swiper-nav{
 	display: flex !important;
@@ -618,11 +627,19 @@ z-index: -1;			opacity: 1	;background-color:$blueLightColor;
 	margin-top: 0;
 	gap: toRem(20);
 	button{
-		width: toRem(30);
-		height: toRem(30);
-		flex: 0 0 toRem(30);
+		width: toRem(46);
+		height: toRem(46);
+		flex: 0 0 toRem(46);
 		&::before{
-			font-size: toRem(30);
+			font-size: toRem(46);
+		}
+		@media (max-width:$mobileSmall){
+			width: toRem(30);
+			height: toRem(30);
+			flex: 0 0 toRem(30);
+			&::before{
+				font-size: toRem(30);
+			}
 		}
 	}
 }
@@ -680,7 +697,7 @@ z-index: -1;			opacity: 1	;background-color:$blueLightColor;
 
 	&__wrapper {height: 100%;
 		border: 1px solid $yellowColor;border-radius: toRem(10);
-		padding: toRem(36) toRem(32);
+		padding: toRem(37) toRem(31);
 	}
 
 	&__uptitle {font-size: toRem(20);font-weight: 600;
@@ -689,12 +706,13 @@ z-index: -1;			opacity: 1	;background-color:$blueLightColor;
 		text-transform: uppercase;font-family: 'Inter';
 	}
 
-	&__title {font-weight: 500;font-size: toRem(20);margin-bottom: toRem(22);line-height: 120%;		text-transform: uppercase;font-family: 'Inter';
+	&__title {font-weight: 500;font-size: toRem(24);margin-bottom: toRem(22);line-height: 120%;		text-transform: uppercase;font-family: 'Inter';
 
 
 	}
 
-	&__info {font-size: toRem(14);font-weight: 300;line-height: 120%;
+	&__info {font-size: toRem(18);font-weight: 300;
+		line-height: math.div(21.6 ,18 );
 	}
 }
 .expertise__slider{
@@ -760,7 +778,7 @@ opacity: 0;
 
 	
 	@media (max-width:$mobile){
-		margin-bottom: toRem(100);
+		margin-bottom: toRem(102);
 		display: flex;align-items: center;gap: toRem(10);
 		justify-content: space-between;
 	}
