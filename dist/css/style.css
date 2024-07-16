@@ -2257,6 +2257,9 @@ form {
   .portfolio__title {
     margin-bottom: 3.125rem!important
   }
+  .expertise {
+    padding-top: 3.125rem
+  }
   .swiper-button-disabled {
     opacity: 0;
     visibility: hidden

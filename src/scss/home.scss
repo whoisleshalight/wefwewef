@@ -525,7 +525,10 @@ position: relative;
  }
  //========================================================================================================================================================
  .expertise{
-	// padding-top: toRem(50);
+	@media (max-width:$mobile){
+		  	padding-top: toRem(50);
+
+	}
 	padding-bottom: toRem(40);
  }
  .expertise__title{
