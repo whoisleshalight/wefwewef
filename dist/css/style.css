@@ -2319,7 +2319,9 @@ form {
   .portfolio::after {
     display: none
   }
-  .expertise-swiper-one__pagination {
+  .expertise-swiper-one__pagination,
+  .expertise-swiper-three__pagination,
+  .expertise-swiper-two__pagination {
     margin-top: 3.8125rem
   }
   .swiper-expertise__nav._swiper-nav button {

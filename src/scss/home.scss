@@ -613,6 +613,8 @@ z-index: -1;			opacity: 1	;background-color:rgba(58, 3, 159, 1);
 	&__slide {
 	}
 }
+.expertise-swiper-two__pagination,
+.expertise-swiper-three__pagination,
 .expertise-swiper-one__pagination{
 	@media (max-width:$mobileSmall){
 		 margin-top: toRem(61); 
