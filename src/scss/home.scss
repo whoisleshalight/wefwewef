@@ -283,7 +283,9 @@ z-index: -1;			opacity: .7;background-color:$blueLightColor;
 		padding: toRem(30);
 		height: 100%;
 		cursor: grab;
-	
+		@media (max-width:$mobileSmall){
+			min-height: toRem(340); 
+	  }
 	}
 
 	&__top {
@@ -703,6 +705,9 @@ z-index: -1;			opacity: 1	;background-color:rgba(58, 3, 159, 1);
 	&__wrapper {height: 100%;
 		border: 1px solid $yellowColor;border-radius: toRem(10);
 		padding: toRem(37) toRem(31);
+		@media (max-width:$mobileSmall){
+			 min-height: toRem(346); 
+		}
 	}
 
 	&__uptitle {font-size: toRem(20);font-weight: 600;

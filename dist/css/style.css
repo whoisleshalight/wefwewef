@@ -2316,6 +2316,9 @@ form {
     max-width: 16.9375rem;
     margin: 0 auto
   }
+  .slide-reviews__wrapper {
+    min-height: 21.25rem
+  }
   .portfolio::before {
     display: none
   }
@@ -2334,6 +2337,9 @@ form {
   }
   .swiper-expertise__nav._swiper-nav button::before {
     font-size: 1.875rem
+  }
+  .slide-expertise__wrapper {
+    min-height: 21.625rem
   }
   .reviews .reviews__container {
     max-width: 100%!important;
