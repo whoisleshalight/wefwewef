@@ -2320,12 +2320,8 @@ form {
     background-position: center;
     background-repeat: no-repeat;
     bottom: 17.5rem;
-<<<<<<< HEAD
     right: -3.125rem;
     z-index: -1
-=======
-    right: -3.125rem
->>>>>>> 7f70cca3119f1b6aaec5068b429ae185555230c2
   }
   .swiper-button-disabled {
     opacity: 0;
