@@ -333,6 +333,12 @@
 		padding: toRem(30);
 		height: 100%;
 		cursor: grab;
+<<<<<<< HEAD
+=======
+		@media (max-width: $mobileSmall) {
+			min-height: toRem(340);
+		}
+>>>>>>> 7f70cca3119f1b6aaec5068b429ae185555230c2
 	}
 
 	&__top {
@@ -696,7 +702,10 @@
 				background-repeat: no-repeat;
 				bottom: toRem(280);
 				right: toRem(-50);
+<<<<<<< HEAD
 				z-index: -1;
+=======
+>>>>>>> 7f70cca3119f1b6aaec5068b429ae185555230c2
 			}
 		}
 	}
@@ -959,6 +968,7 @@
 	line-height: 130%;
 }
 
+<<<<<<< HEAD
 // .expertise__slide {
 // 	@media (max-width: $mobile) {
 // 		min-height: toRem(250);
@@ -969,6 +979,18 @@
 // 		min-height: toRem(300);
 // 	}
 // }
+=======
+.expertise__slide {
+	@media (max-width: $mobile) {
+		min-height: toRem(250);
+	}
+}
+.reviews__slide {
+	@media (max-width: $mobile) {
+		min-height: toRem(300);
+	}
+}
+>>>>>>> 7f70cca3119f1b6aaec5068b429ae185555230c2
 
 .reviews {
 	.reviews__container {
